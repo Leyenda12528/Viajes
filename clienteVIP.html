@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Viajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-mode="client">
+
+    <header>
+        <div class="title" id="cliente-nombre">Cargando...</div>
+        <div class="subtitle">Historial de Viajes</div>
+    </header>
+
+    <main class="container">
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-title">Acreditado</span>
+                <span class="stat-value paid" id="total-paid">$0.00</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-title">Pendiente</span>
+                <span class="stat-value pending" id="total-pending">$0.00</span>
+            </div>
+        </div>
+
+        <div id="historial-list" style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="loader"></div>
+        </div>
+
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
