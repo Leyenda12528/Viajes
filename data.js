@@ -12,7 +12,7 @@ window.APP_DATA = {
           "hora": "8:00 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         },
         {
@@ -20,7 +20,7 @@ window.APP_DATA = {
           "hora": "6:45 pm",
           "destino": "a la casa",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -35,7 +35,7 @@ window.APP_DATA = {
           "hora": "8:00 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         },
         {
@@ -43,7 +43,7 @@ window.APP_DATA = {
           "hora": "6:48 pm",
           "destino": "a la casa",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -58,7 +58,7 @@ window.APP_DATA = {
           "hora": "3:20 pm",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -73,7 +73,7 @@ window.APP_DATA = {
           "hora": "6:30 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -88,7 +88,7 @@ window.APP_DATA = {
           "hora": "6:20 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -103,7 +103,7 @@ window.APP_DATA = {
           "hora": "5:10 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         },
         {
@@ -111,7 +111,7 @@ window.APP_DATA = {
           "hora": "5:30 pm",
           "destino": "a Plaza Presidente",
           "monto": 4,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         }
       ]
@@ -126,13 +126,89 @@ window.APP_DATA = {
           "hora": "5:10 am",
           "destino": "al trabajo",
           "monto": 3.5,
-          "pagado": false,
+          "pagado": true,
           "tipo": "viaje"
         },
         {
           "id": "v11",
           "hora": "5:30 pm",
           "destino": "a la casa",
+          "monto": 3.5,
+          "pagado": true,
+          "tipo": "viaje"
+        }
+      ]
+    },
+    {
+      "id_dia": "d8",
+      "fecha": "11/04/2026",
+      "nombre_dia": "Sabado",
+      "viajes": [
+        {
+          "id": "v12",
+          "hora": "8:10 am",
+          "destino": "al trabajo",
+          "monto": 0.0,
+          "pagado": true,
+          "tipo": "viaje"
+        }
+      ]
+    },
+    {
+      "id_dia": "d9",
+      "fecha": "12/04/2026",
+      "nombre_dia": "Domingo",
+      "viajes": [
+        {
+          "id": "v13",
+          "hora": "5:10 pm",
+          "destino": "Escalon",
+          "monto": 3.5,
+          "pagado": true,
+          "tipo": "viaje"
+        },
+        {
+          "id": "v14",
+          "hora": "6:45 pm",
+          "destino": "a la casa",
+          "monto": 3.5,
+          "pagado": true,
+          "tipo": "viaje"
+        }
+      ]
+    },
+    {
+      "id_dia": "d10",
+      "fecha": "13/04/2026",
+      "nombre_dia": "Lunes",
+      "viajes": [
+        {
+          "id": "v13",
+          "hora": "5:10 am",
+          "destino": "al trabajo",
+          "monto": 3.5,
+          "pagado": true,
+          "tipo": "viaje"
+        },
+        {
+          "id": "v14",
+          "hora": "6:45 pm",
+          "destino": "a la casa",
+          "monto": 3.5,
+          "pagado": false,
+          "tipo": "viaje"
+        }
+      ]
+    },
+    {
+      "id_dia": "d11",
+      "fecha": "14/04/2026",
+      "nombre_dia": "Martes",
+      "viajes": [
+        {
+          "id": "v15",
+          "hora": "5:20 am",
+          "destino": "al trabajo",
           "monto": 3.5,
           "pagado": false,
           "tipo": "viaje"
