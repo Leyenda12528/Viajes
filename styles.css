@@ -425,3 +425,70 @@ input[type="checkbox"]:checked::before {
 .btn-primary:hover {
     opacity: 0.9;
 }
+
+/* Quincena Collapsible Cards */
+.quincena-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.quincena-card[open] {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    border-color: rgba(69, 149, 219, 0.5); /* Different color when open */
+}
+
+.quincena-summary {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1.5rem;
+    user-select: none;
+    position: relative;
+    transition: background 0.2s ease;
+    border-left: 4px solid var(--secondary);
+}
+
+.quincena-summary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Hide default marker for details */
+.quincena-summary::-webkit-details-marker {
+    display: none;
+}
+.quincena-summary {
+    list-style: none; /* for firefox/standard */
+}
+
+/* Arrow icon */
+.quincena-summary::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.quincena-card[open] .quincena-summary::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--text-pure);
+}
+
+.quincena-card[open] .quincena-summary {
+    border-bottom: 1px solid var(--card-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.quincena-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+}
