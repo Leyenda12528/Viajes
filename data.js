@@ -155,7 +155,8 @@ window.APP_DATA = {
           "fecha": "20/04/2026",
           "nombre_dia": "Lunes",
           "viajes": [
-            { "id": "v23", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+            { "id": "v23", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v24", "hora": "5:30 am", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         },
         {
@@ -163,8 +164,8 @@ window.APP_DATA = {
           "fecha": "21/04/2026",
           "nombre_dia": "Martes",
           "viajes": [
-            { "id": "v24", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
-            { "id": "v25", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+            { "id": "v25", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v26", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         },
         {
@@ -172,8 +173,8 @@ window.APP_DATA = {
           "fecha": "22/04/2026",
           "nombre_dia": "Miércoles",
           "viajes": [
-            { "id": "v26", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
-            { "id": "v27", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+            { "id": "v27", "hora": "5:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v28", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         }
       ]
