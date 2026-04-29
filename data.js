@@ -209,7 +209,25 @@ window.APP_DATA = {
           "fecha": "27/04/2026",
           "nombre_dia": "Lunes",
           "viajes": [
-            { "id": "v35", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+            { "id": "v35", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v36", "hora": "3:35 am", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d23",
+          "fecha": "28/04/2026",
+          "nombre_dia": "Martes",
+          "viajes": [
+            { "id": "v37", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d24",
+          "fecha": "29/04/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            { "id": "v38", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v39", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         }
       ]
