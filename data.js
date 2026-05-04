@@ -229,6 +229,35 @@ window.APP_DATA = {
             { "id": "v38", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
             { "id": "v39", "hora": "5:35 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
           ]
+        },
+        {
+          "id_dia": "d25",
+          "fecha": "30/04/2026",
+          "nombre_dia": "Jueves",
+          "viajes": [
+            { "id": "v40", "hora": "5:35 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "periodo": "1era Quincena Mayo (01/05 al 15/05)",
+      "total": 40.00,
+      "abono": 0.00,
+      "restante": 40.00,
+      "tipo_cobro": "2",
+      "descripcion": "Paquete 24 viajes",
+      "viajes_paquete": 24,
+      "viajes_acumulados": 1,
+      "historial": [
+        {
+          "id_dia": "d26",
+          "fecha": "01/05/2026",
+          "nombre_dia": "Viernes",
+          "viajes": [
+            { "id": "v41", "hora": "7:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
         }
       ]
     }
