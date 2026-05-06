@@ -110,8 +110,8 @@ window.APP_DATA = {
       "id": "q2",
       "periodo": "2da Quincena Abril (15/04 al 30/04)",
       "total": 40.00,
-      "abono": 0.00,
-      "restante": 40.00,
+      "abono": 40.00,
+      "restante": 0.00,
       "tipo_cobro": "2",
       "descripcion": "Paquete 24 viajes",
       "viajes_paquete": 24,
@@ -257,6 +257,30 @@ window.APP_DATA = {
           "nombre_dia": "Viernes",
           "viajes": [
             { "id": "v41", "hora": "7:20 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d27",
+          "fecha": "04/05/2026",
+          "nombre_dia": "Lunes",
+          "viajes": [
+            { "id": "v42", "hora": "5:50 am", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d28",
+          "fecha": "05/05/2026",
+          "nombre_dia": "Martes",
+          "viajes": [
+            { "id": "v43", "hora": "5:30 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d29",
+          "fecha": "06/05/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            { "id": "v44", "hora": "5:40 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         }
       ]
