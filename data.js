@@ -280,7 +280,61 @@ window.APP_DATA = {
           "fecha": "06/05/2026",
           "nombre_dia": "Miércoles",
           "viajes": [
-            { "id": "v44", "hora": "5:40 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
+            { "id": "v44", "hora": "5:40 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v45", "hora": "6:53 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d30",
+          "fecha": "07/05/2026",
+          "nombre_dia": "Jueves",
+          "viajes": [
+            { "id": "v46", "hora": "5:40 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v47", "hora": "5:53 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d31",
+          "fecha": "08/05/2026",
+          "nombre_dia": "Viernes",
+          "viajes": [
+            { "id": "v48", "hora": "5:40 am", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v49", "hora": "4:39 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d32",
+          "fecha": "09/05/2026",
+          "nombre_dia": "Sábado",
+          "viajes": [
+            { "id": "v50", "hora": "12:30 pm", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v51", "hora": "8:10 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d33",
+          "fecha": "11/05/2026",
+          "nombre_dia": "Lunes",
+          "viajes": [
+            { "id": "v52", "hora": "05:10 pm", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v53", "hora": "6:00 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d34",
+          "fecha": "12/05/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            { "id": "v54", "hora": "05:10 pm", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" },
+            { "id": "v55", "hora": "5:50 pm", "destino": "a la casa", "monto": 0, "pagado": false, "tipo": "2" }
+          ]
+        },
+        {
+          "id_dia": "d35",
+          "fecha": "14/05/2026",
+          "nombre_dia": "Jueves",
+          "viajes": [
+            { "id": "v54", "hora": "05:10 pm", "destino": "al trabajo", "monto": 0, "pagado": false, "tipo": "2" }
           ]
         }
       ]
