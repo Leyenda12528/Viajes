@@ -61,11 +61,21 @@ function render() {
                     const badgeText = showPrice && isPaid ? 'Pagado' : (showPrice ? 'Pendiente' : 'INCLUIDO');
 
                     if (isAdmin) {
-                        tripsHtml += `
-                            <div class="trip-item admin-mode" style="background:var(--card-bg); margin-bottom:0.5rem; padding:1rem; border-radius:8px;">
+                        let checkboxHtml = '';
+                        let gridStyle = '';
+                        if (quincena.tipo_cobro === "1") {
+                            checkboxHtml = `
                                 <div class="checkbox-wrapper">
                                     <input type="checkbox" id="chk-${v.id}" ${isPaid ? 'checked' : ''} onchange="togglePago('${quincena.id}', '${day.id_dia}', '${v.id}', this.checked)">
                                 </div>
+                            `;
+                        } else {
+                            gridStyle = 'grid-template-columns: 1fr auto;';
+                        }
+
+                        tripsHtml += `
+                            <div class="trip-item admin-mode" style="background:var(--card-bg); margin-bottom:0.5rem; padding:1rem; border-radius:8px; ${gridStyle}">
+                                ${checkboxHtml}
                                 <div class="trip-info">
                                     <span class="trip-destination" style="display:block; font-weight:600;">${v.destino}</span>
                                     <span class="trip-time" style="font-size:0.9em; opacity:0.8;">⌚ ${v.hora}</span>
@@ -117,9 +127,17 @@ function render() {
             }
         }
 
+        let editBtn = '';
+        if (isAdmin && qIndex > 1) {
+            editBtn = `<button class="btn-edit-quincena" onclick="openModalQuincena('${quincena.id}'); event.stopPropagation();">✏️ Editar</button>`;
+        }
+
         quincenaHtml.innerHTML = `
             <summary class="quincena-summary">
-                <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #fff;">${quincena.periodo}</div>
+                <div style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                    <span>${quincena.periodo}</span>
+                    ${editBtn}
+                </div>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; text-align: center;">
                     <div>
                         <span style="font-size: 0.85rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 0.3rem;">Total</span>
@@ -137,6 +155,7 @@ function render() {
                 ${descText ? `<div style="text-align:center; margin-top: 1rem; font-size: 0.85rem;">${descText}</div>` : ''}
             </summary>
             <div class="quincena-content">
+                ${isAdmin ? `<button class="btn-add-viaje" onclick="openModalViaje('${quincena.id}')">➕ Agregar Viaje</button>` : ''}
                 ${daysHtml}
             </div>
         `;
@@ -183,11 +202,189 @@ window.downloadJson = function() {
     }
 }
 
-window.closeModal = function() {
-    const modal = document.getElementById('success-modal');
+window.closeModal = function(id = 'success-modal') {
+    const modal = document.getElementById(id);
     if (modal) {
         modal.classList.remove('active');
     }
+}
+
+window.openModalQuincena = function(id = null) {
+    const modal = document.getElementById('quincena-modal');
+    const form = document.getElementById('quincena-form');
+    const title = document.getElementById('quincena-modal-title');
+    form.reset();
+    
+    if (id) {
+        title.textContent = '✏️ Editar Quincena';
+        const q = appData.quincenas.find(q => q.id === id);
+        if (q) {
+            document.getElementById('q-id').value = q.id;
+            document.getElementById('q-periodo').value = q.periodo;
+            document.getElementById('q-tipo').value = q.tipo_cobro;
+            document.getElementById('q-total').value = q.total;
+            document.getElementById('q-abono').value = q.abono || 0;
+            if (q.tipo_cobro === "2") {
+                document.getElementById('q-viajes-paquete').value = q.viajes_paquete || 24;
+                document.getElementById('q-acumulados').value = q.viajes_acumulados || 0;
+            }
+        }
+    } else {
+        title.textContent = '➕ Nueva Quincena';
+        document.getElementById('q-id').value = '';
+        document.getElementById('q-tipo').value = "2";
+        document.getElementById('q-abono').value = 0;
+        
+        if (appData.quincenas.length > 0) {
+            const lastQ = appData.quincenas[appData.quincenas.length - 1];
+            if (lastQ.tipo_cobro === "2") {
+                let lastTripsCount = 0;
+                if (lastQ.historial) {
+                    lastQ.historial.forEach(d => lastTripsCount += d.viajes.length);
+                }
+                const totalAllowed = (lastQ.viajes_paquete || 24) + (lastQ.viajes_acumulados || 0);
+                const remaining = totalAllowed - lastTripsCount;
+                if (remaining > 0) {
+                    document.getElementById('q-acumulados').value = remaining;
+                }
+            }
+        }
+    }
+    
+    window.toggleQuincenaFields();
+    modal.classList.add('active');
+}
+
+window.toggleQuincenaFields = function() {
+    const tipo = document.getElementById('q-tipo').value;
+    document.getElementById('wrap-paquete').style.display = tipo === "2" ? 'flex' : 'none';
+    document.getElementById('wrap-acumulados').style.display = tipo === "2" ? 'flex' : 'none';
+}
+
+window.saveQuincena = function(e) {
+    e.preventDefault();
+    const id = document.getElementById('q-id').value;
+    const periodo = document.getElementById('q-periodo').value;
+    const tipo = document.getElementById('q-tipo').value;
+    const total = parseFloat(document.getElementById('q-total').value) || 0;
+    const abono = parseFloat(document.getElementById('q-abono').value) || 0;
+    
+    let qObj;
+    if (id) {
+        qObj = appData.quincenas.find(q => q.id === id);
+    } else {
+        qObj = {
+            id: 'q' + Date.now(),
+            historial: []
+        };
+        appData.quincenas.push(qObj);
+    }
+    
+    qObj.periodo = periodo;
+    qObj.tipo_cobro = tipo;
+    qObj.total = total;
+    qObj.abono = abono;
+    qObj.restante = Math.max(0, total - abono);
+    
+    if (tipo === "2") {
+        qObj.descripcion = "Paquete " + document.getElementById('q-viajes-paquete').value + " viajes";
+        qObj.viajes_paquete = parseInt(document.getElementById('q-viajes-paquete').value) || 24;
+        qObj.viajes_acumulados = parseInt(document.getElementById('q-acumulados').value) || 0;
+    } else {
+        delete qObj.descripcion;
+        delete qObj.viajes_paquete;
+        delete qObj.viajes_acumulados;
+    }
+    
+    closeModal('quincena-modal');
+    render();
+}
+
+window.openModalViaje = function(qId) {
+    document.getElementById('viaje-form').reset();
+    document.getElementById('v-quincena-id').value = qId;
+    
+    const q = appData.quincenas.find(q => q.id === qId);
+    document.getElementById('wrap-v-monto').style.display = q && q.tipo_cobro === "1" ? 'flex' : 'none';
+    document.getElementById('wrap-v-destino-otro').style.display = 'none';
+    
+    const today = new Date();
+    const offset = today.getTimezoneOffset() * 60000;
+    const localISOTime = (new Date(today - offset)).toISOString().slice(0, 10);
+    document.getElementById('v-fecha').value = localISOTime;
+    
+    document.getElementById('viaje-modal').classList.add('active');
+}
+
+window.toggleDestinoOtro = function() {
+    const val = document.getElementById('v-destino').value;
+    document.getElementById('wrap-v-destino-otro').style.display = val === 'otro' ? 'flex' : 'none';
+}
+
+window.saveViaje = function(e) {
+    e.preventDefault();
+    const qId = document.getElementById('v-quincena-id').value;
+    const q = appData.quincenas.find(q => q.id === qId);
+    if (!q) return;
+    
+    const fechaInput = document.getElementById('v-fecha').value;
+    const hora = document.getElementById('v-hora').value;
+    let destino = document.getElementById('v-destino').value;
+    if (destino === 'otro') {
+        destino = document.getElementById('v-destino-otro').value;
+    }
+    
+    const [year, month, dayStr] = fechaInput.split('-');
+    const dateObj = new Date(year, month - 1, dayStr);
+    const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const nombreDia = dias[dateObj.getDay()];
+    const fechaFormatted = `${dayStr}/${month}/${year}`;
+    
+    let monto = 0;
+    if (q.tipo_cobro === "1") {
+        monto = parseFloat(document.getElementById('v-monto').value) || 0;
+    }
+    
+    const formatAMPM = (timeStr) => {
+        let [h, m] = timeStr.split(':');
+        h = parseInt(h);
+        const ampm = h >= 12 ? 'pm' : 'am';
+        h = h % 12 || 12;
+        return `${h}:${m} ${ampm}`;
+    };
+    
+    const nuevoViaje = {
+        id: 'v' + Date.now(),
+        hora: formatAMPM(hora),
+        destino: destino,
+        monto: monto,
+        pagado: false,
+        tipo: q.tipo_cobro
+    };
+    
+    if (!q.historial) q.historial = [];
+    
+    let dayObj = q.historial.find(d => d.fecha === fechaFormatted);
+    if (dayObj) {
+        dayObj.viajes.push(nuevoViaje);
+    } else {
+        q.historial.push({
+            id_dia: 'd' + Date.now(),
+            fecha: fechaFormatted,
+            nombre_dia: nombreDia,
+            viajes: [nuevoViaje]
+        });
+        q.historial.sort((a, b) => {
+            const parseD = (str) => {
+                const [d, m, y] = str.split('/');
+                return new Date(y, m-1, d).getTime();
+            };
+            return parseD(a.fecha) - parseD(b.fecha);
+        });
+    }
+    
+    closeModal('viaje-modal');
+    render();
 }
 
 document.addEventListener('DOMContentLoaded', init);
