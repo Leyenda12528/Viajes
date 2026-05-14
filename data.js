@@ -6,8 +6,8 @@ window.APP_DATA = {
       "id": "q1",
       "periodo": "1ra Quincena Abril (31/03 al 14/04)",
       "total": 56.50,
-      "abono": 50.00,
-      "restante": 6.50,
+      "abono": 56.50,
+      "restante": 0.00,
       "tipo_cobro": "1",
       "historial": [
         {
