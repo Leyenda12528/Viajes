@@ -66,7 +66,7 @@ function render() {
                         if (quincena.tipo_cobro === "1") {
                             checkboxHtml = `
                                 <div class="checkbox-wrapper">
-                                    <input type="checkbox" id="chk-${v.id}" ${isPaid ? 'checked' : ''} onchange="togglePago('${quincena.id}', '${day.id_dia}', '${v.id}', this.checked)">
+                                    <input type="checkbox" id="chk-${v.id}" ${isPaid ? 'checked' : ''} ${qIndex <= 1 ? 'disabled' : ''} onchange="togglePago('${quincena.id}', '${day.id_dia}', '${v.id}', this.checked)">
                                 </div>
                             `;
                         } else {
@@ -155,7 +155,7 @@ function render() {
                 ${descText ? `<div style="text-align:center; margin-top: 1rem; font-size: 0.85rem;">${descText}</div>` : ''}
             </summary>
             <div class="quincena-content">
-                ${isAdmin ? `<button class="btn-add-viaje" onclick="openModalViaje('${quincena.id}')">➕ Agregar Viaje</button>` : ''}
+                ${isAdmin && qIndex > 1 ? `<button class="btn-add-viaje" onclick="openModalViaje('${quincena.id}')">➕ Agregar Viaje</button>` : ''}
                 ${daysHtml}
             </div>
         `;
