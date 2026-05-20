@@ -841,7 +841,7 @@ window.APP_DATA = {
           ]
         }
       ],
-      "periodo": "2da Quincena Mayo ",
+      "periodo": "2da Quincena Mayo (15/05 al 31/05)",
       "tipo_cobro": "2",
       "total": 40,
       "abono": 0,
