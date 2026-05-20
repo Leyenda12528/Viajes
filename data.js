@@ -539,8 +539,8 @@ window.APP_DATA = {
       "id": "q3",
       "periodo": "1era Quincena Mayo (01/05 al 15/05)",
       "total": 40,
-      "abono": 0,
-      "restante": 40,
+      "abono": 40,
+      "restante": 0,
       "tipo_cobro": "2",
       "descripcion": "Paquete 24 viajes",
       "viajes_paquete": 24,
@@ -760,6 +760,95 @@ window.APP_DATA = {
           ]
         }
       ]
+    },
+    {
+      "id": "q1779285647729",
+      "historial": [
+        {
+          "id_dia": "d1779285676704",
+          "fecha": "16/05/2026",
+          "nombre_dia": "Sábado",
+          "viajes": [
+            {
+              "id": "v1779285676704",
+              "hora": "3:30 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779285747880",
+          "fecha": "18/05/2026",
+          "nombre_dia": "Lunes",
+          "viajes": [
+            {
+              "id": "v1779285747880",
+              "hora": "5:10 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1779285760112",
+              "hora": "4:30 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779285787360",
+          "fecha": "19/05/2026",
+          "nombre_dia": "Martes",
+          "viajes": [
+            {
+              "id": "v1779285787360",
+              "hora": "5:20 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1779285799096",
+              "hora": "5:30 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779285822592",
+          "fecha": "20/05/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            {
+              "id": "v1779285822592",
+              "hora": "5:25 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        }
+      ],
+      "periodo": "2da Quincena Mayo ",
+      "tipo_cobro": "2",
+      "total": 40,
+      "abono": 0,
+      "restante": 40,
+      "descripcion": "Paquete 24 viajes",
+      "viajes_paquete": 24,
+      "viajes_acumulados": 8
     }
   ]
 };
