@@ -827,12 +827,35 @@ window.APP_DATA = {
         },
         {
           "id_dia": "d1779285822592",
-          "fecha": "20/05/2026",
-          "nombre_dia": "Miércoles",
+          "fecha": "21/05/2026",
+          "nombre_dia": "Jueves",
           "viajes": [
             {
               "id": "v1779285822592",
-              "hora": "5:25 am",
+              "hora": "5:20 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1779456909686",
+              "hora": "7:50 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779456919661",
+          "fecha": "22/05/2026",
+          "nombre_dia": "Viernes",
+          "viajes": [
+            {
+              "id": "v1779456919661",
+              "hora": "5:20 am",
               "destino": "al trabajo",
               "monto": 0,
               "pagado": false,
