@@ -860,6 +860,105 @@ window.APP_DATA = {
               "monto": 0,
               "pagado": false,
               "tipo": "2"
+            },
+            {
+              "id": "v1779713903932",
+              "hora": "5:00 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779713934795",
+          "fecha": "23/05/2026",
+          "nombre_dia": "Sábado",
+          "viajes": [
+            {
+              "id": "v1779713934795",
+              "hora": "6:12 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779713975715",
+          "fecha": "25/05/2026",
+          "nombre_dia": "Lunes",
+          "viajes": [
+            {
+              "id": "v1779713975715",
+              "hora": "5:20 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1779935047176",
+              "hora": "5:30 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779935062801",
+          "fecha": "26/05/2026",
+          "nombre_dia": "Martes",
+          "viajes": [
+            {
+              "id": "v1779935062801",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1779935069150",
+          "fecha": "27/05/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            {
+              "id": "v1779935069150",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1780031239355",
+          "fecha": "28/05/2026",
+          "nombre_dia": "Jueves",
+          "viajes": [
+            {
+              "id": "v1780031239355",
+              "hora": "5:20 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780031249185",
+              "hora": "7:00 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
             }
           ]
         }
