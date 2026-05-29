@@ -965,9 +965,9 @@ window.APP_DATA = {
       ],
       "periodo": "2da Quincena Mayo (15/05 al 31/05)",
       "tipo_cobro": "2",
-      "total": 40,
+      "total": 0,
       "abono": 0,
-      "restante": 40,
+      "restante": 0,
       "descripcion": "Paquete 24 viajes",
       "viajes_paquete": 24,
       "viajes_acumulados": 8
