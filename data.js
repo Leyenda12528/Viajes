@@ -971,6 +971,88 @@ window.APP_DATA = {
       "descripcion": "Paquete 24 viajes",
       "viajes_paquete": 24,
       "viajes_acumulados": 8
+    },
+    {
+      "id": "q1780323637962",
+      "historial": [
+        {
+          "id_dia": "d1780523835303",
+          "fecha": "01/06/2026",
+          "nombre_dia": "Lunes",
+          "viajes": [
+            {
+              "id": "v1780523835303",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780523850006",
+              "hora": "7:00 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780523861142",
+              "hora": "7:00 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1780523870454",
+          "fecha": "02/06/2026",
+          "nombre_dia": "Martes",
+          "viajes": [
+            {
+              "id": "v1780523870454",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780523889654",
+              "hora": "7:00 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1780523902294",
+          "fecha": "03/06/2026",
+          "nombre_dia": "Miércoles",
+          "viajes": [
+            {
+              "id": "v1780523902294",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        }
+      ],
+      "periodo": "1ra Quincena Junio",
+      "tipo_cobro": "2",
+      "total": 35,
+      "abono": 0,
+      "restante": 35,
+      "descripcion": "Paquete 20 viajes",
+      "viajes_paquete": 20,
+      "viajes_acumulados": 0
     }
   ]
 };
