@@ -1043,6 +1043,67 @@ window.APP_DATA = {
               "tipo": "2"
             }
           ]
+        },
+        {
+          "id_dia": "d1780576477890",
+          "fecha": "04/06/2026",
+          "nombre_dia": "Jueves",
+          "viajes": [
+            {
+              "id": "v1780576477890",
+              "hora": "5:10 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780676232465",
+              "hora": "5:45 pm",
+              "destino": "a la casa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1780676239914",
+          "fecha": "05/06/2026",
+          "nombre_dia": "Viernes",
+          "viajes": [
+            {
+              "id": "v1780676239914",
+              "hora": "5:15 am",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            },
+            {
+              "id": "v1780835406068",
+              "hora": "4:40 pm",
+              "destino": "apopa",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
+        },
+        {
+          "id_dia": "d1780835421387",
+          "fecha": "06/06/2026",
+          "nombre_dia": "Sábado",
+          "viajes": [
+            {
+              "id": "v1780835421387",
+              "hora": "12:00 pm",
+              "destino": "al trabajo",
+              "monto": 0,
+              "pagado": false,
+              "tipo": "2"
+            }
+          ]
         }
       ],
       "periodo": "1ra Quincena Junio",
